@@ -1,14 +1,14 @@
 import express from "express";
-import ProductController from "./product.controller";
+import ProductController from "./product.controller.js";
 
-const router = express.Router();
+const productRouter = express.Router();
 
 //URl continues after /api/product/.......
 
 const productController =new ProductController();
 
-router.get("/", productController.getAllProduct);
-router.post("/" , productController.addProduct);
-router.get()
+productRouter.get("/", productController.getAllProduct);
+productRouter.post("/" , productController.addProduct);
 
-export default router;
+
+export default productRouter;
